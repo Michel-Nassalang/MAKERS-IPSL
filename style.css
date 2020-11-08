@@ -1,0 +1,316 @@
+/* -------------------------------------
+ Réalisé et commenté par Michel Nassalang
+ Document libre de droit et modifiable
+ A noter que la mise en forme ne prend pas en charge tous les périphériques comme les téléphones c'est pas adaptable
+ Il faudrait  gerer la partie responsive de la page pour pouvoir bien visualiser la page sur les autres peripheriques
+ Pour bien visualiser la page veuillez utiliser un ordinateur
+ ---------------------------------------*/
+
+
+/* -------------------------------------
+ partie englobant tout l'affichage
+ ---------------------------------------*/
+
+body{
+     margin: 0;  /* parametre gérant l'espacement externe */
+    padding: 0;  /* parametre gérant l'espacement interne */
+}
+/* -------------------------------------
+ partie pour l'entete
+ ---------------------------------------*/
+header{
+    margin-bottom: 25px; /* parametre gérant l'espacement  externe situé en bas avec bottom*/
+}
+header #entete{
+    background: rgba(112, 108, 108, 0.4); /* parametre pour configurer la couleur d'une arriere plan */
+    height: 75px; /* parametre pour configurer manuellement la longueur de l'objet */
+    position: sticky; /* parametre gerant le positionnement des blocs  */
+    width: 100%; /* parametre pour configurer manuellement la largeur de l'objet */
+    display: grid; /* parametre gerant le decoupage et une bonne mise en forme d'une partie */
+    grid-template-columns: 40% 60%;
+}
+header .entete .logo{
+    display: flex; /* deja décrit voir en haut */
+}
+header .entete .logo img{
+    margin-top: 3px; /* deja décrit voir en haut */
+    border-radius: 50%; /* deja décrit voir en haut */
+    margin-left: 5%; /* parametre gérant l'espacement externe  gauche*/
+}
+header .entete .logo h1{
+    margin-left: 20px; /* parametre gérant l'espacement externe  gauche*/
+    font-family: 'forte'; /* parametre gérant le style d'ecriture */
+    font-size: 30px; /* parametre gérant le taille des ecrits */
+}
+header .entete nav{
+    position: absolute;
+    right: 50px ; /* parametre gérant l'espacement externe  droite*/
+}
+header .entete nav ul li a{
+    text-decoration: none; /*eviter le soulignement des mots ou texte et toute genre de décoration ou en créer */
+    color: black; /* couleur d'ecriture */
+    font-family: 'Nunito';
+}
+header .entete nav ul li{
+    display: inline-block; /* deja décrit voir en haut */
+    font-size: 18px; /* deja décrit voir en haut */
+    padding: 10px; /* deja décrit voir en haut */
+    font-family: 'Nunito'; /* deja décrit voir en haut */
+    color: black; /* deja décrit voir en haut */
+    text-decoration: none; /* deja décrit voir en haut */
+}
+header .background{
+
+    padding-top: 0; /* deja décrit voir en haut */
+    background-image: url(../IPSL_CODEX/scale.jpg); /* mettre une image comme  fond d'écran */
+    background-repeat: no-repeat; /*eviter la répétition du  fond d'ecran */
+    background-size: cover; /* gerer la taille du fond d'ecran */
+    height: 550px; /* deja décrit voir en haut */
+    width: 100%; /* deja décrit voir en haut */
+    border-bottom-left-radius: 5px; /*creer des bordures  */
+    border-bottom-right-radius: 5px; /*creer des bordures  */
+}
+/* ------------------------------------------------
+ partie concernant l'affichage de la partie  Folio
+ --------------------------------------------------*/
+.premier{
+    margin: 50px; /* deja décrit voir en haut */
+    position: relative; /* deja décrit voir en haut */
+}
+.premier h2{
+    text-align: center; /* centrer les textes  ou modifier les affichements */
+    margin-top: 15px; /* deja décrit voir en haut */
+    margin-bottom: 25px; /* deja décrit voir en haut */
+    color: grey; /* deja décrit voir en haut */
+    font-size: 35px; /* deja décrit voir en haut */
+    font-family: 'Forte'; /* deja décrit voir en haut */
+    letter-spacing: 2px; /* creer une espacement entre les lettres */
+}
+.premier .description{
+    z-index: 1; /* gerer l'affichage en premier ou arriere plan */
+    position: relative; /* deja décrit voir en haut */
+    display: grid; /* deja décrit voir en haut */
+    grid-template-columns: 40% 60%; /* gerer le partitionement */
+}
+.premier .description .texte {
+    background: rgb(236, 234, 234); /* deja décrit voir en haut */
+    padding-left: 30px; /* deja décrit voir en haut */
+    padding-top: 15px; /* deja décrit voir en haut */
+    border-radius: 10px; /* deja décrit voir en haut */
+    margin-right: 20px; /* deja décrit voir en haut */
+}
+.premier .description .texte h1{
+    font-family: 'Forte'; /* deja décrit voir en haut */
+    font-size: 22px; /* deja décrit voir en haut */
+}
+.premier .description .texte li{
+    margin: 15px; /* deja décrit voir en haut */
+}
+.premier .description .texte a{
+    font-family: Georgia, 'Times New Roman', Times, serif; /* deja décrit voir en haut */
+    font-size: 16px; /* deja décrit voir en haut */
+    text-decoration: none; /* deja décrit voir en haut */
+    color: rgb(29, 28, 28); /* deja décrit voir en haut */
+}
+.premier .description .texte a:hover{
+    padding-left: 70px; /* deja décrit voir en haut */
+    transition: ease-in-out 1s; /* creer une transition des objets dans un temps bien determiner */
+}
+.premier .description .image1 img{
+    width: 100%; /* deja décrit voir en haut */
+    height: 400px; /* deja décrit voir en haut */
+}
+/* ------------------------------------------------
+ partie concernant l'affichage de la partie  de l'image imbriqué dans la partie folio avec les pointillés rouges 
+ --------------------------------------------------*/
+.intru{
+    margin-left: 30px; /* deja décrit voir en haut */
+    margin-top: -130px; /* deja décrit voir en haut */
+    margin-bottom: 50px; /* deja décrit voir en haut */
+    z-index: 10; /* deja décrit voir en haut */
+}
+.intru img{
+    height: 200px; /* deja décrit voir en haut */
+    width: 280px; /* deja décrit voir en haut */
+}
+/* ------------------------------------------------
+ partie concernant l'affichage de la partie  Travail 
+ --------------------------------------------------*/
+.deuxieme{
+    padding-top: 30px; /* deja décrit voir en haut */
+    padding-bottom: 30px; /* deja décrit voir en haut */
+    background-color: rgba(212, 205, 205, 0.24); /* gerer la couleur de l'arriere plan avec une transparence*/
+}
+.deuxieme h2{
+    text-align: center; /* deja décrit voir en haut */
+    margin-top: 15px; /* deja décrit voir en haut */
+    margin-bottom: 25px; /* deja décrit voir en haut */
+    color: grey; /* deja décrit voir en haut */
+    font-size: 35px; /* deja décrit voir en haut */ 
+    font-family: 'Forte'; /* deja décrit voir en haut */
+    letter-spacing: 2px; /* deja décrit voir en haut */
+}
+.presentation2{
+    display: grid; /* deja décrit voir en haut */
+    grid-template-columns: 60% 40%; /* deja décrit voir en haut */
+    text-align: justify; /* deja décrit voir en haut */
+    align-content: flex-start; /* gerer l'alignement des objets */
+}
+.presentation2 .video{
+width: 100%; /* deja décrit voir en haut */
+}
+.presentation2 .presentation{
+    padding-left: 25px; /* deja décrit voir en haut */
+    padding-right: 25px; /* deja décrit voir en haut */
+    border-radius: 8px; /*creer d'une bordure des ensembles */
+}
+video{
+    width: 95%; /* deja décrit voir en haut */
+    height: 400px; /* deja décrit voir en haut */
+    justify-content: center; /* deja décrit voir en haut */
+}
+
+
+/* ------------------------------------------------
+ partie concernant l'affichage du footer 
+ --------------------------------------------------*/
+
+
+footer{
+    margin-top: 60px; /* deja décrit voir en haut */
+    align-items: center; /* deja décrit voir en haut */
+    position: static; /* deja décrit voir en haut */
+    bottom: 0; /* décrire l'espacement en bas d'une partie */
+    background-color:  rgb(0, 0, 0); /* deja décrit voir en haut */
+    border-top-left-radius: 3px; /* deja décrit voir en haut */
+    border-top-right-radius: 3px; /* deja décrit voir en haut */
+    color: #ffffff; /* deja décrit voir en haut */
+    padding-top: 30px; /* deja décrit voir en haut */
+}
+  
+.pied{
+    display: grid; /* deja décrit voir en haut */
+    grid-template-columns: 30% 30% 40%; /* deja décrit voir en haut */
+    min-height: 10vh; /* gerer la longueur maximale des objets */
+    padding-top: 30px; /* deja décrit voir en haut */
+    padding-bottom: 20px; /* deja décrit voir en haut */
+    background: url(../IPSL_CODEX/map.png); /* deja décrit voir en haut */
+}
+.pied h2{
+    color: rgb(146, 145, 145); /* deja décrit voir en haut */
+    font-family: 'Forte'; /* deja décrit voir en haut */
+    letter-spacing: 2px; /* deja décrit voir en haut */
+    text-align: center; /* deja décrit voir en haut */
+}
+.conteneur{
+    margin-left: 15px; /* deja décrit voir en haut */
+    margin-top: 5px; /* deja décrit voir en haut */
+    bottom: 15px; /* deja décrit voir en haut */
+    align-items: center; /* deja décrit voir en haut */
+}
+.presta{
+    text-justify: newspaper; /* deja décrit voir en haut */
+    text-align: justify; /* deja décrit voir en haut */
+}
+.presta  .s1{
+    color: rgb(161, 160, 160); /* deja décrit voir en haut */
+    font-family: 'Forte'; /* deja décrit voir en haut */
+}
+.presta .s2{
+    color: rgb(255, 255, 255); /* deja décrit voir en haut */
+    font-family: 'Forte'; /* deja décrit voir en haut */
+}
+.presta p{
+    color: rgb(255, 255, 255); /* deja décrit voir en haut */
+    font-family:'Nunito'; /* deja décrit voir en haut */
+}
+.presta i{
+    font-family: 'Nunito'; /* deja décrit voir en haut */
+    font-size: 16px; /* deja décrit voir en haut */
+    color: rgb(255, 255, 255); /* deja décrit voir en haut */
+}
+.fab{
+    cursor: pointer; /* creer un pointer une fois qu'on est sur l'element concerné */
+    align-items: center; /* deja décrit voir en haut */
+    font-size: 30px; /* deja décrit voir en haut */
+    color: rgb(255, 255, 255); /* deja décrit voir en haut */
+    margin-top: 10px; /* deja décrit voir en haut */
+}
+
+.conteneur p{
+    padding-top: 15px; /* deja décrit voir en haut */
+}
+.vision{
+    justify-content: space-between; /* deja décrit voir en haut */
+    align-content: center; /* deja décrit voir en haut */
+}
+.vision ul li a{
+    text-decoration: none; /* deja décrit voir en haut */
+    color: rgb(247, 244, 244); /* deja décrit voir en haut */
+}
+.vision ul li{
+    margin-top: 15px; /* deja décrit voir en haut */
+    margin-left: 40%; /* deja décrit voir en haut */
+    align-content: center; /* deja décrit voir en haut */
+    color: rgb(107, 106, 105); /* deja décrit voir en haut */
+    transition: 0.8s; /* deja décrit voir en haut */
+}
+.vision ul li a{
+    font-family: 'Nunito'; /* deja décrit voir en haut */
+}
+.vision ul li:hover{
+    margin-left: 20%; /* deja décrit voir en haut */
+    color: rgb(255, 255, 255); /* deja décrit voir en haut */
+}
+.contact_us form{
+    display: inline-table; /* deja décrit voir en haut */
+    margin-left: 15%; /* deja décrit voir en haut */
+    transition: 0.8s; /* deja décrit voir en haut */
+}
+.contact_us form .mail{
+    width: 85%; /* deja décrit voir en haut */
+    height: 45px; /* deja décrit voir en haut */
+    margin-top: 25px; /* deja décrit voir en haut */
+    border: none; /* gerer les bornes */
+    border-radius: 4px; /* deja décrit voir en haut */
+    background-color: rgb(245, 245, 245); /* deja décrit voir en haut */
+    margin-left: 10%; /* deja décrit voir en haut */
+    color: #ffffff; /* deja décrit voir en haut */
+}
+.contact_us form textarea{
+    width: 85%; /* deja décrit voir en haut */
+    margin-top: 25px; /* deja décrit voir en haut */
+    border: none; /* deja décrit voir en haut */
+    border-radius: 4px; /* deja décrit voir en haut */
+    background-color: rgb(255, 255, 255); /* deja décrit voir en haut */
+    margin-left: 10%; /* deja décrit voir en haut */
+    color: #ffffff; /* deja décrit voir en haut */
+}
+.bottomfooter{
+    display: flex; /* deja décrit voir en haut */
+    justify-content: space-around; /* deja décrit voir en haut */
+    margin-left: 40px; /* deja décrit voir en haut */
+    margin-right: 40px; /* deja décrit voir en haut */
+}
+.bottomfooter a{
+    color: white; /* deja décrit voir en haut */
+    font-size: 16px; /* deja décrit voir en haut */
+    font-family: 'Nunito'; /* deja décrit voir en haut */
+    text-decoration: none; /* deja décrit voir en haut */
+}
+.bottomfooter a:hover{
+    color: white; /* deja décrit voir en haut */
+    font-size: 16px; /* deja décrit voir en haut */
+}
+.submit_footer{
+    margin-top: 25px; /* deja décrit voir en haut */
+    color: black; /* deja décrit voir en haut */
+    border: none; /* deja décrit voir en haut */
+    border-radius: 4px; /* deja décrit voir en haut */
+    background-color: rgb(139, 136, 136); /* deja décrit voir en haut */
+    margin-left: 10%; /* deja décrit voir en haut */
+    color: #ffffff; /* deja décrit voir en haut */
+    align-content: center; /* deja décrit voir en haut */
+    justify-content: center; /* deja décrit voir en haut */
+    font-family: 'Nunito'; /* deja décrit voir en haut */
+}
